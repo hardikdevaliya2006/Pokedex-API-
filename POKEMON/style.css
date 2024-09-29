@@ -1,0 +1,728 @@
+/* ----------- CSS Boiler Plate ----------- */
+
+/* Importing the Poppins font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+/* Resetting margin and padding for all elements, setting box-sizing and default font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-size: 100%;
+}
+
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+    margin-left: 5px;
+    width: 5px;
+    height: 8px;
+    scroll-behavior: smooth;
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--identity-primary);
+    border-radius: 8px;
+}
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: var(--identity-primary);
+    border-radius: 8px;
+}
+
+/* Setting height and width for html and body, and smooth scroll behavior */
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+/* Defining CSS variables */
+:root {
+  --identity-primary: #dc0a2d;
+  --grayscale-black: #000000;
+  --grayscale-dark: #212121;        
+  --grayscale-medium: #666666;
+  --grayscale-light: #e0e0e0;
+  --grayscale-background: #efefef;
+  --grayscale-white: #ffffff;
+  --grayscale-pramnet: #ffffff;
+  --glass-effect-pramnet: rgba(255, 255, 255, 0.18);
+  --headline-font-size: 2rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --drop-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+  --drop-shadow-hover: 0px 3px 12px 3px rgba(0, 0, 0, 0.2);
+  --drop-shadow-inner: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* Dark mode theme variables */
+.dark-mode {
+    --identity-primary: #212121;
+    --grayscale-white: #666;
+    --grayscale-black: #fff;
+    --drop-shadow-inner: 0px 1px 3px 1px rgba(255, 255, 255, 0.25) inset;
+    --drop-shadow-hover: 0px 3px 12px 3px rgba(255, 255, 255, 0.2);
+}
+
+/* ----------- CSS Boiler Plate ----------- */
+
+/* ----------- Background CSS ----------- */
+
+/* Styling the background section */
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--identity-primary);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ----------- Background CSS ----------- */
+
+/* Styling the header section */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 3rem;
+}
+
+/* ----------- Logo-Name CSS ----------- */
+
+/* Styling the logo and name container */
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Styling the name text */
+.name {
+    font-size: var(--headline-font-size);
+    color: var(--grayscale-pramnet);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Styling the logo image */
+.logo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+/* ----------- Logo-Name CSS ----------- */
+
+/* ----------- Search-Sort CSS ----------- */
+
+/* Styling the search and sort container */
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling the search bar */
+.search {
+    width: 96%;
+    height: 2rem;
+    background-color: var(--grayscale-white);
+    border-radius: 1rem;
+    box-shadow: var(--drop-shadow-inner);
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the magnifier and remove icons */
+.magnifier, .remove {
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the SVG icons inside magnifier and remove */
+.magnifier svg, .remove svg {
+    height: 1rem;
+    width: 1rem;
+}
+ 
+/* javascript */
+
+/* Hiding the cross element */
+#cross {
+    display: none;
+}
+
+/* javascript */
+
+/* Styling the input container */
+.input {
+    width: 100%;
+}
+
+/* Styling the text input */
+input[type="text"] {
+    color: var(--grayscale-black);
+    width: 100%;
+    background-color: var(--grayscale-white);
+    outline: none;
+    border: none;
+}
+
+/* Styling the placeholder text */
+input[type="text"]::placeholder {
+    color: var(--grayscale-black);
+}
+
+/* Styling the sort button */
+.sort {
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--grayscale-white);
+    border-radius: 1.5rem;
+    box-shadow: var(--drop-shadow-inner);
+    cursor: pointer;
+    margin-left: 0.56rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the SVG icon inside sort button */
+.sort svg {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem;
+}
+
+/* Styling the sort wrapper */
+.sort-warrper {
+    z-index: 88;
+    display: none;
+    position: absolute;
+    right: 2.3rem;
+    top: 9rem;
+    width: 10rem;
+    background-color: var(--identity-primary);
+    color: var(--grayscale-pramnet);
+    padding: 1rem;
+    box-shadow: var(--drop-shadow-hover);
+    border-radius: 1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* javascript */
+
+/* Displaying the sort wrapper when open */
+.sort-warrper-open {
+    display: block;
+}
+
+/* javascript */
+
+/* Styling the select dropdown */
+.select {
+    background-color: var(--grayscale-white);
+    color: var(--grayscale-black);
+    font-weight: var(--font-weight-regular);
+    width: 8rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    box-shadow: var(--drop-shadow-inner);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling the filter options */
+.filter {
+    width: 8rem;    
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.2rem;
+} 
+
+/* Adding cursor pointer to all elements inside filter */
+.filter * {
+    cursor: pointer;
+}
+
+/* Styling the radio input */
+input[type="radio"] {
+    accent-color: var(--identity-primary);
+}
+
+/* ----------- Search-Sort CSS ----------- */
+
+/* ----------- Theme CSS ----------- */
+
+/* Styling the theme mode button */
+.mode {
+    background-color: var(--grayscale-white);
+    box-shadow: var(--drop-shadow-inner);
+    min-width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the inner div of the mode button */
+.mode div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hiding the active class */
+.active {
+    display: none;
+}
+
+/* ----------- Theme CSS ----------- */
+
+/* ----------- Main Section CSS ----------- */
+
+/* Styling the main data wrapper */
+.data-warrper {
+    position: relative;
+    height: 80%;
+    min-width: 100%;
+    margin: auto;
+    padding: 0.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+/* Styling the data wrapper */
+.data-warrap {
+    background-color: var(--grayscale-white);
+    height: 100%;
+    min-width: 95%;
+    border-radius: 0.5rem;
+    box-shadow: var(--drop-shadow-inner);
+}
+
+/* Styling the error message */
+#error {
+    z-index: 22;
+    top: 45%;
+    left: 48%;
+    font-size: 1rem;
+    display: none;
+    color: var(--grayscale-black);
+    position: absolute;
+}
+
+/* ----------- Main Section CSS ----------- */ 
+
+/* ----------- Pokemon Card CSS ----------- */ 
+
+/* Styling the data wrapper for Pokemon cards */
+.data-warrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+/* Styling the Pokemon image */
+.poke-img img {
+    height: 8rem;
+    width: 8rem;
+}
+
+/* Styling the Pokemon card wrapper */
+.poke-warrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 14rem;
+    width: 10rem;
+    background-color: bisque;
+    box-shadow: var(--drop-shadow-inner);
+}
+
+/* Styling the Pokemon ID section */
+.poke-id {
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    width: 100%;
+}
+
+/* Styling the Pokemon name */
+.poke-name {
+    text-transform: capitalize;
+}
+
+/* ----------- Pokemon Card CSS ----------- */ 
+
+/* ----------- Some Media Queries CSS ----------- */ 
+
+/* Media query for mobile devices (max-width: 430px) */
+@media screen and (max-width: 430px) {
+    /* Adjusting header padding and gap */
+    header {
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+    }
+
+    /* Adjusting data wrapper padding */
+    .data-warrper {
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    /* Adjusting Pokemon image size */
+    .poke-img img {
+        height: 6rem;
+        width: 6rem;
+    }
+    
+    /* Adjusting Pokemon card wrapper padding and width */
+    .poke-warrap {
+        padding: 0.5rem;
+        width: 8rem;
+    }
+}
+
+/* ----------- Some Media Queries CSS ----------- */
+
+/* ========================== CSS For details.html ========================== */
+
+/* ----------- Details Page Stucture CSS ----------- */
+
+.detail-main {
+    position: relative;
+    background-color: #78C850da;
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+}
+
+/* ----------- Details Page Stucture CSS ----------- */
+
+/* ----------- Name And Id Wrraper CSS ----------- */
+
+.name-id-warraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    width: 100vw;
+    height: 4rem;
+}
+
+.back svg{
+    height: 48px;
+}
+
+.back-cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--glass-effect-pramnet);
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.pokemone-name p{
+    color: var(--grayscale-white);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.pokemone-name {
+    display: flex;
+}
+
+.poken-id p{
+    height: 48px;
+    display: flex;
+    align-items: top;
+    color: var(--grayscale-white);
+}
+
+.poke-id i{
+    color: var(--grayscale-white);
+}
+
+.poken-id {
+    display: flex;
+    align-items: top;
+    justify-content: start;
+    width: fit-content;
+}
+
+/* ----------- Name And Id Wrraper CSS ----------- */
+
+/* ----------- ABSULATE ----------- */
+
+.poke-logo-big img{
+    right: 0px;
+    position: absolute;
+    height: 35vh;
+    opacity: 0.5;
+}
+
+.big-name p{
+    font-family: "Dela Gothic One";
+    text-transform: uppercase;
+    font-size: 5rem;
+    opacity: 0.5;
+    top: 10rem;
+    left: 5rem;
+    position: absolute;
+    color: var(--grayscale-white);
+}
+
+/* ----------- ABSULATE ----------- */
+
+.futured-img-wrraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    z-index: 999;
+    width: 100vw;
+}
+
+.left-arrow svg, .right-arrow svg{
+    height: 50px;
+}
+
+.pokeImg img{
+    height: 250px;
+}
+
+/* ----------- Details Info Wrapper CSS ----------- */
+
+.detais-info-wrraper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+}
+
+.detail-info-wrappe {
+    border-radius: 16px;
+    box-shadow: var(--drop-shadow-inner);
+    height: auto;
+    padding: 2rem 1rem;
+    width: 40rem;
+    background-color: var(--grayscale-white);
+}
+
+/* ----------- Power Wrapper CSS ----------- */
+
+.powerPackege {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.power-wrraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    background-color: red;
+    width: fit-content;
+    text-align: center;
+    border-radius: 50px;
+    padding: 0.5rem 0.8rem  0.5rem 0.5rem;
+}
+
+.power {
+    width: auto;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: var(--grayscale-white);
+    font-weight: var(--font-weight-bold);
+    text-transform: capitalize;
+}
+
+.svgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 36px;
+    width: 36px;
+    border-radius: 50px;
+    background-color: var(--grayscale-white);
+}
+
+.power svg {
+    background-color: var(--grayscale-white);
+    border-radius: 24px;
+}
+
+/* ----------- Power Wrapper CSS ----------- */
+
+/* ----------- About Wrapper CSS ----------- */
+
+.about-wrraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.about-wrraper > p {
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.pokemon-detail-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+}
+
+.pokemon-detail-wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.main-title svg {
+    height: 32px;
+}
+
+.border {
+    height: 5rem;
+    border: 1px solid ;
+    opacity: 0.2;
+}
+
+#pokeMove {
+    text-transform: capitalize;
+}
+
+.main-title p{
+    font-size: 1.2rem;
+}
+
+/* ----------- About Wrapper CSS ----------- */
+
+/* ----------- Info line CSS ----------- */
+
+.info-line {
+    word-break: break-all;
+    text-align: center;
+}
+
+/* ----------- Info line CSS ----------- */
+
+/* ----------- Pokemone State Wrraper CSS ----------- */
+
+.base-state-wrraper {
+    margin: 1.5rem 1rem;
+}
+
+.base-state-wrraper > p {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.states-wrrape {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-around;
+
+    width: 100%;
+}
+
+.states {
+    min-width: 40px;
+    text-align: right;
+    color: #78C850da;
+    font-weight: var(--font-weight-bold);
+}
+
+.progress-value {
+    font-weight: var(--font-weight-bold);
+}
+
+.neno-border {
+    height: 1rem; 
+    border: 1px solid #78C850da;
+    opacity: 0.4;
+}
+
+.progress-bar {
+    height: 12px;
+    border: 2px solid #fff;
+    width: 40rem;
+}
+
+progress[value]::-webkit-progress-bar {
+    width: 100%;
+    border-radius: 50px;
+    background-color: #78c85054;
+}
+progress[value]::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #78C850da;
+}
+  
+
+/* ----------- Pokemone State Wrraper CSS ----------- */
+
+/* ----------- Details Info Wrapper CSS ----------- */
+
+/* ------------------------- Some Media Queries CSS ------------------------- */ 
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* ------------------------- Some Media Queries CSS ------------------------- */ 
+
+
+/* ========================== CSS For details.html ========================== */
