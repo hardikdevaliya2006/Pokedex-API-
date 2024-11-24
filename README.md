@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://via.placeholder.com/800x200" alt="Pokedex Banner" />
+  <img src="https://github.com/hardikdevaliya2006/Pokedex-API-/blob/main/POKEMON/Assets/pokeball.svg" alt="Pokedex Banner" />
 </p>
 
 <h1 align="center">📖 Pokedex API</h1>
